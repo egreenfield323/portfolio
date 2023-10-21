@@ -9,6 +9,13 @@ $("#view-resume-btn").click(function () {
     window.location.href = "#video";
 });
 
+$("#view-gallery-btn").click(function () {
+    $("#resumePage").hide(0);
+    $("#frontPage").show(2200);
+    shiftToGalleryNavBar();
+    window.location.href = "#about";
+});
+
 $("#pictureHomeBtn").click(function () {
     $("#resumePage").hide(0);
     $("#frontPage").show(2200);
