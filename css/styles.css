@@ -12821,10 +12821,10 @@ section.resume-section .resume-section-content {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin: 2rem;
+  /* margin: 2rem; */
   transform: translate(-50%, -50%);
   height: auto;
-  width: 80%;
+  width: 76%;
   box-shadow: 0 0 0 100vh rgba(0, 0, 0, .7);
   z-index: 1;
 }
