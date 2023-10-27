@@ -73,7 +73,11 @@
         <!-- Video -->
         <section class="resume-section" id="video">
             <div class="resume-section-content">
+
                 <h2 class="mb-5">Video</h2>
+                <h3>Click on videos to enlarge them. Click on the video again to close out.</h3>
+
+                </li>
 
                 <div class="videoGallery">
 
@@ -142,25 +146,24 @@
                 </div>
 
                 <script>
-
                     var video = document.querySelectorAll('video');
 
                     video.forEach(play => play.addEventListener('click', () => {
                         play.classList.toggle('active');
 
-                        play.toggleAttribute("controls");
-
-                        if (play.paused) {
-                            play.currentTime = 0;
-                            play.play();
-                        } else {
-
+                        if (play.hasAttribute("controls")) {
+                            play.removeAttribute("controls");
                             play.pause();
                             play.currentTime = 5;
-
+                        } else {
+                            play.setAttribute("controls", true);
+                            play.currentTime = 0;
+                            setTimeout(() => {
+                                play.play().catch(error => {
+                                });
+                            }, 0);
                         }
                     }));
-
                 </script>
 
 
@@ -172,7 +175,6 @@
         <section class="resume-section" id="music">
             <div class="resume-section-content">
                 <h2 class="mb-5">Music</h2>
-                <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5"> -->
                 <p style="font-size:x-large;">I enjoy making music and playing drums in my free time.</p>
                 <p>
                 <ul>
@@ -207,7 +209,8 @@
                     Your browser does not support the audio element.
                 </audio>
                 <audio controls>
-                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213509&authkey=!AOfBpCaMk3GWAbY"
+                    <source
+                        src="https://onedrive.live.com/download?resid=1E0D8364906B257%213509&authkey=!AOfBpCaMk3GWAbY"
                         type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
@@ -216,18 +219,89 @@
                         type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-
-
-                <!-- </div> -->
         </section>
         <hr class="m-0" />
         <!-- Animation-->
         <section class="resume-section" id="animation">
             <div class="resume-section-content">
                 <h2 class="mb-5">Animation</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <h3>Section under development</h3>
+
+                <div class="videoPlaylistContainer">
+
+                    <div class="gallery-front-video">
+                        <div class="gallery-video">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213513&authkey=!AD8Sn2co7P5xBCY"
+                                controls autoplay></video>
+                            <h3 class="video-gallery-title"><em>Spider-Man: No Way Home - </em>end scene in Lego</h3>
+                            <p class="video-gallery-description" style="display: flex">I made this using blender. I
+                                might come back to this finish it in the future</p>
+                        </div>
+                    </div>
+                    <div class="video-gallery-list">
+                        <div class="playlist-vid active">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213513&authkey=!AD8Sn2co7P5xBCY"></video>
+                            <h3 class="video-gallery-title"><em>Spider-Man: No Way Home - </em>end scene in Lego</h3>
+                            <p class="video-gallery-description" style="display: none">I made this using blender. I
+                                might come back to this finish it in the future.</p>
+                        </div>
+                        <div class="playlist-vid">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213514&authkey=!ADOf-leFrZVtfZU"></video>
+                            <h3 class="video-gallery-title">Horror Game Cutscene</h3>
+                            <p class="video-gallery-description" style="display: none">This is a cutscene I made for a
+                                game my friend was making. Made using blender.</p>
+                        </div>
+                        <div class="playlist-vid">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213511&authkey=!AIdvrxUSgTI1t-I"></video>
+                            <h3 class="video-gallery-title">Little Robot Plays Piano</h3>
+                            <p class="video-gallery-description" style="display: none">This was my first attempt at
+                                manually animating a character in Blender. I hope to release some of my more recent work
+                                soon.</p>
+                        </div>
+                        <div class="playlist-vid">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213512&authkey=!AKM2sr6joWUTupo"></video>
+                            <h3 class="video-gallery-title">Lego Water Simulation</h3>
+                            <p class="video-gallery-description" style="display: none">This is a Lego water simulation I
+                                made in Blender.</p>
+                        </div>
+                        <div class="playlist-vid">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213515&authkey=!ADhrL-HN7B6h8OU"></video>
+                            <h3 class="video-gallery-title">Lego Snow Simulation</h3>
+                            <p class="video-gallery-description" style="display: none">This is a scene in a Lego
+                                re-creation I am making where I was testing snow physics with Legos.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <script>
+
+                    let listVideo = document.querySelectorAll('.video-gallery-list .playlist-vid');
+                    let mainVideo = document.querySelector('.gallery-front-video video');
+                    let title = document.querySelector('.gallery-front-video .video-gallery-title');
+                    let description = document.querySelector('.gallery-front-video .video-gallery-description');
+
+                    listVideo.forEach(video => {
+                        video.onclick = () => {
+                            listVideo.forEach(vid => vid.classList.remove('active'));
+                            video.classList.add('active');
+                            if (video.classList.contains('active')) {
+                                let src = video.children[0].getAttribute('src');
+                                mainVideo.src = src;
+                                let text = video.children[1].innerHTML;
+                                title.innerHTML = text;
+                                let desc = video.children[2].innerHTML;
+                                description.innerHTML = desc;
+                            };
+                        };
+                    });
+
+                </script>
+
             </div>
         </section>
         <hr class="m-0" />
@@ -363,6 +437,7 @@
                     <li class="list-inline-item"><i class="devicon-html5-plain"></i></li>
                     <li class="list-inline-item"><i class="devicon-css3-plain"></i></li>
                     <li class="list-inline-item"><i class="devicon-javascript-plain"></i></li>
+
 
                 </ul>
                 <div class="subheading mb-3">Work/Hobbies</div>
