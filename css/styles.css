@@ -12832,3 +12832,13 @@ section.resume-section .resume-section-content {
   transition: none;
   transform: translate(-50%, -50%) scale(1); 
 }
+
+
+/* Style the audio controls */
+audio {
+  width: 100%;
+  background-color: white;
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 15px;
+}

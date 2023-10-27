@@ -69,55 +69,63 @@
             </div>
         </section>
         <hr class="m-0" />
-        
-<!-- Video -->
-<section class="resume-section" id="video">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Video</h2>
 
-        <div class="videoGallery">
+        <!-- Video -->
+        <section class="resume-section" id="video">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Video</h2>
 
-            <p style="font-size:x-large;">I have been editing videos since I was little. Here are some of the
-                few videos I have edited.</p>
-            <p>A few notes:
-            <ul>
-                <li>When the COVID pandemic hit, I volunteered to create virtual band and choir videos for our
-                    highschool. A few of those videos are below.</li>
-                <li>I frequently use programs like Premiere Pro, Davinci Resolve/Fusion, After Effects,
-                    Audition, and Final Cut Pro to edit videos.</li>
-                    <li>If you want to see the full versions of the videos in my gallery, I have left some of them <a href="https://1drv.ms/f/s!AleyBkk22OABmyiVuuY4V8-KchXs?e=MtmWyk" target="_blank">here</a></li>
-            </ul>
-            </p>
+                <div class="videoGallery">
 
-            <div class="video-container">
+                    <p style="font-size:x-large;">I have been editing videos since I was little. Here are some of the
+                        few videos I have edited.</p>
+                    <p>A few notes:
+                    <ul>
+                        <li>When the COVID pandemic hit, I volunteered to create virtual band and choir videos for our
+                            highschool. A few of those videos are below.</li>
+                        <li>I frequently use programs like Premiere Pro, Davinci Resolve/Fusion, After Effects,
+                            Audition, and Final Cut Pro to edit videos.</li>
+                        <li>If you want to see the full versions of the videos in my gallery, I have left some of them
+                            <a href="https://1drv.ms/f/s!AleyBkk22OABmyiVuuY4V8-KchXs?e=MtmWyk" target="_blank">here</a>
+                        </li>
+                    </ul>
+                    </p>
 
-                <div class="galleryVideo">
-                    <video src="https://onedrive.live.com/download?resid=1E0D8364906B257%213490&authkey=!ANiMAay1YAVE5iM#t=13" type='video/mp4'></video>
-                </div>
+                    <div class="video-container">
 
-                <div class="galleryVideo">
-                    <video
-                        src="https://onedrive.live.com/download?resid=1E0D8364906B257%213491&authkey=!AAZhfNAFZa2Bz-8#t=5"
-                        type='video/mp4'></video>
-                </div>
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213490&authkey=!ANiMAay1YAVE5iM#t=13"
+                                type='video/mp4'></video>
+                        </div>
 
-                <div class="galleryVideo">
-                    <video src="https://onedrive.live.com/download?resid=1E0D8364906B257%213492&authkey=!AJu3zh-jgR1ZwQE#t=5"></video>
-                </div>
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213491&authkey=!AAZhfNAFZa2Bz-8#t=5"
+                                type='video/mp4'></video>
+                        </div>
 
-                <div class="galleryVideo">
-                    <video src="https://onedrive.live.com/download?resid=1E0D8364906B257%213493&authkey=!AJMG27Ofq31owjA#t=5"></video>
-                </div>
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213492&authkey=!AJu3zh-jgR1ZwQE#t=5"></video>
+                        </div>
 
-                <div class="galleryVideo">
-                    <video src="https://onedrive.live.com/download?resid=1E0D8364906B257%213494&authkey=!AOAwcC-n7Qplr_0#t=5"></video>
-                </div>
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213493&authkey=!AJMG27Ofq31owjA#t=5"></video>
+                        </div>
 
-                <div class="galleryVideo">
-                    <video src="https://onedrive.live.com/download?resid=1E0D8364906B257%213495&authkey=!AD6-8E6Rchq9lqU#t=5"></video>
-                </div>
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213494&authkey=!AOAwcC-n7Qplr_0#t=5"></video>
+                        </div>
 
-                <!-- <div class="galleryVideo">
+                        <div class="galleryVideo">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213495&authkey=!AD6-8E6Rchq9lqU#t=5"></video>
+                        </div>
+
+                        <!-- <div class="galleryVideo">
                     <video src="video7.mp4" muted></video>
                 </div>
 
@@ -129,76 +137,120 @@
                     <video src="video9.mp4" muted></video>
                 </div> -->
 
+                    </div>
+
+                </div>
+
+                <script>
+
+                    var video = document.querySelectorAll('video');
+
+                    video.forEach(play => play.addEventListener('click', () => {
+                        play.classList.toggle('active');
+
+                        play.toggleAttribute("controls");
+
+                        if (play.paused) {
+                            play.currentTime = 0;
+                            play.play();
+                        } else {
+
+                            play.pause();
+                            play.currentTime = 5;
+
+                        }
+                    }));
+
+                </script>
+
+
             </div>
 
-        </div>
-        
-        <script>
+        </section>
+        <hr class="m-0" />
+        <!-- Music -->
+        <section class="resume-section" id="music">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Music</h2>
+                <!-- <div class="d-flex flex-column flex-md-row justify-content-between mb-5"> -->
+                <p style="font-size:x-large;">I enjoy making music and playing drums in my free time.</p>
+                <p>
+                <ul>
+                    <li>I play snare on the Ball State drumline, and also play drum set in Ball State jazz ensembles
+                    </li>
+                    <li>To make music, I frequently use programs like Adobe Audition, Ableton Live 11, and FL
+                        Studio.</li>
+                </ul>
+                Here are a few music tracks I have made:
+                </p>
 
-            var video = document.querySelectorAll('video');
+                <audio controls>
+                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213503&authkey=!AOn0ezUU9"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213507&authkey=!A"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source
+                        src="https://onedrive.live.com/download?resid=1E0D8364906B257%213506&authkey=!AB7fByAe6aiyfdE"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
 
-            video.forEach(play => play.addEventListener('click', () => {
-                play.classList.toggle('active');
+                </audio>
+                <audio controls>
+                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213505&authkey=!ADuO"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213509&authkey=!AOfBpCaMk3GWAbY"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="https://onedrive.live.com/download?resid=1E0D8364906B257%213508&authkey=!AH7-l231zdgz9"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
 
-                play.toggleAttribute("controls");
 
-                if (play.paused) {
-                    play.currentTime = 0;
-                    play.play();
-                } else {
+                <!-- </div> -->
+        </section>
+        <hr class="m-0" />
+        <!-- Animation-->
+        <section class="resume-section" id="animation">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Animation</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <h3>Section under development</h3>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
 
-                    play.pause();
-                    play.currentTime = 5;
+        <!-- Service -->
+        <section class="resume-section" id="service">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Service</h2>
+                <h3>Section under development</h3>
+            </div>
+        </section>
+        <hr class="m-0" />
 
-                }
-            }));
+        <!-- School Activities -->
+        <section class="resume-section" id="school">
+            <div class="resume-section-content">
+                <h2 class="mb-5">School Activities</h2>
+                <h3>Section under development</h3>
 
-        </script>
-
-
-    </div>
-
-</section>
-<hr class="m-0" />
-<!-- Music -->
-<section class="resume-section" id="music">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Music</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <h3>Section under development</h3>
-    </div>
-</section>
-<hr class="m-0" />
-<!-- Animation-->
-<section class="resume-section" id="animation">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Animation</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-            <h3>Section under development</h3>
-        </div>
-    </div>
-</section>
-<hr class="m-0" />
-
-<!-- Service -->
-<section class="resume-section" id="service">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Service</h2>
-        <h3>Section under development</h3>
-    </div>
-</section>
-<hr class="m-0" />
-
-<!-- School Activities -->
-<section class="resume-section" id="school">
-    <div class="resume-section-content">
-        <h2 class="mb-5">School Activities</h2>
-        <h3>Section under development</h3>
-
-        <button class="btn btn-dark" id="view-resume-btn" style="margin-top: 2rem;">View my resume</button>
-    </div>
-</section>
-<hr class="m-0" />
+                <button class="btn btn-dark" id="view-resume-btn" style="margin-top: 2rem;">View my resume</button>
+            </div>
+        </section>
+        <hr class="m-0" />
 
     </div>
 
@@ -334,7 +386,7 @@
         </section>
         <hr class="m-0" />
 
-        
+
 
     </div>
 
