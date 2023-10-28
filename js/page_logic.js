@@ -1,24 +1,24 @@
 $("#resumePage").hide();
 $("#frontPage").hide();
-$("#frontPage").show(2200);
+$("#frontPage").show(1700);
 
 $("#view-resume-btn").click(function () {
     $("#frontPage").hide(0);
-    $("#resumePage").show(2200);
+    $("#resumePage").show(1700);
     shiftToResumeNavBar();
     window.location.href = "#video";
 });
 
 $("#view-gallery-btn").click(function () {
     $("#resumePage").hide(0);
-    $("#frontPage").show(2200);
+    $("#frontPage").show(1700);
     shiftToGalleryNavBar();
     window.location.href = "#about";
 });
 
 $("#pictureHomeBtn").click(function () {
     $("#resumePage").hide(0);
-    $("#frontPage").show(2200);
+    $("#frontPage").show(1700);
     shiftToGalleryNavBar();
     window.location.href = "#about";
 });
