@@ -36,13 +36,14 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#programming">Programming</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#video">Video</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#music">Music</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#animation">Animation</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#service">Service</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#school">School Activities</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-about" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-programming" href="#programming">Programming</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-video" href="#video">Video</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-music" href="#music">Music</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-animation" href="#animation">Animation</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-live-production" href="#live-production">Live Production</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-school" href="#school">School Activities</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="portfolioRet" href="" style="display: none;">Portfolio</a></li>
             </ul>
         </div>
     </nav>
@@ -59,7 +60,7 @@
                     CS @ Ball State University ·
                     <a href="mailto:evangreenfield@live.com">evangreenfield@live.com</a>
                 </div>
-                <p class="lead mb-5">Welcome to my portfolio. Click on my picture to return home at any time.</p>
+                <p class="lead mb-5">Welcome. <b>Select a section on the left.</b> Click on my picture to return home at any time.</p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://www.linkedin.com/in/evangreenfield1/"><i
                             class="fab fa-linkedin-in"></i></a>
@@ -67,19 +68,36 @@
                     <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a> -->
                     <!-- <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
                 </div>
+                <br>
+                <button class="social-icon" id="view-resume-btn" style="margin-top: 2rem;">View my resume</button>
             </div>
         </section>
         <hr class="m-0" />
 
+        <!--Porfolio selection-->
+
+        <section id="portfolioSelect" style="display: inline-block">
+
+            <div class="resume-section-content" style="text-align: center;">
+        
+                
+        
+            </div>
+        
+        </section>
+        
+
+
         <!--Programming-->
 
-        <section class="resume-section" id="programming">
+        <section class="resume-section" id="programming" style="display: none">
             <div class="resume-section-content">
 
                 <h2 class="mb-5">Programming</h2>
                 <p>Most of my professional experience has been in programming/software engineering roles</p>
                 <ul>
-                    <li>Worked as a <b>software engineering intern at State Farm</b><ul>
+                    <li>Worked as a <b>software engineering intern at State Farm</b>
+                        <ul>
                             <li>Summer of 2022-2023</li>
                             <li>Fall/Spring semesters of 2022-2023</li>
                         </ul>
@@ -93,18 +111,21 @@
 
                 <p>The program allows users to enter important keywords and paragraphs, and generate code to put in the
                     &lt;head&gt; which makes the page stand out in Google search results</p>
-                    <br><br>
-                <p>With my time at <b>State Farm</b>, I learned <b>HTML, CSS, Javascript, and jQuery</b>. I created this website with that knowledge, too. I love learning new languages</p>
+                <br><br>
+                <p>With my time at <b>State Farm</b>, I learned <b>HTML, CSS, Javascript, and jQuery</b>. I created this
+                    website with that knowledge, too. I love learning new languages</p>
 
 
                 <img src="assets/img/portfolio_github_view.png" style="width:300px;height:120px;">
-                    <br>
-                    <hr>
-                    <br>
-                    <div>
-                <p>Last semester, myself and three other computer science students made this program with <b>Dart and Flutter</b>. It pulls from the RAWG API to display upcoming games, search for any game, and favorite them to your list</p>
-                <a href="https://github.com/egreenfield323/CS222-Final">GitHub repository</a>
-            </div>
+                <br>
+                <hr>
+                <br>
+                <div>
+                    <p>Last semester, myself and three other computer science students made this program with <b>Dart
+                            and Flutter</b>. It pulls from the RAWG API to display upcoming games, search for any game,
+                        and favorite them to your list</p>
+                    <a href="https://github.com/egreenfield323/CS222-Final" target="_blank">GitHub repository</a>
+                </div>
                 <img src="assets/img/cs222_project.png" style="width:540px;height:960px;">
                 <br>
 
@@ -115,7 +136,7 @@
 
 
         <!-- Video -->
-        <section class="resume-section" id="video">
+        <section class="resume-section" id="video" style="display: none">
             <div class="resume-section-content">
 
                 <h2 class="mb-5">Video</h2>
@@ -216,7 +237,7 @@
         </section>
         <hr class="m-0" />
         <!-- Music -->
-        <section class="resume-section" id="music">
+        <section class="resume-section" id="music" style="display: none">
             <div class="resume-section-content">
                 <h2 class="mb-5">Music</h2>
                 <p style="font-size:x-large;">I enjoy making music and playing drums in my free time.</p>
@@ -264,7 +285,7 @@
         </section>
         <hr class="m-0" />
         <!-- Animation-->
-        <section class="resume-section" id="animation">
+        <section class="resume-section" id="animation" style="display: none">
             <div class="resume-section-content">
                 <h2 class="mb-5">Animation</h2>
 
@@ -348,22 +369,20 @@
         </section>
         <hr class="m-0" />
 
-        <!-- Service -->
-        <section class="resume-section" id="service">
+        <!-- Live Production -->
+        <section class="resume-section" id="live-production" style="display: none">
             <div class="resume-section-content">
-                <h2 class="mb-5">Service</h2>
+                <h2 class="mb-5">Live Production</h2>
                 <h3>Section under development</h3>
             </div>
         </section>
         <hr class="m-0" />
 
         <!-- School Activities -->
-        <section class="resume-section" id="school">
+        <section class="resume-section" id="school" style="display: none">
             <div class="resume-section-content">
                 <h2 class="mb-5">School Activities</h2>
                 <h3>Section under development</h3>
-
-                <button class="btn btn-dark" id="view-resume-btn" style="margin-top: 2rem;">View my resume</button>
             </div>
         </section>
         <hr class="m-0" />
@@ -498,7 +517,7 @@
                     </li>
                 </ul>
 
-                <button class="btn btn-dark" id="view-gallery-btn" style="margin-top: 2rem;">View my gallery</button>
+                <button class="btn btn-dark" id="view-gallery-btn" style="margin-top: 2rem;">Back to portfolio</button>
             </div>
         </section>
         <hr class="m-0" />

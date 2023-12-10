@@ -16,7 +16,15 @@ $("#view-gallery-btn").click(function () {
     window.location.href = "#about";
 });
 
-$("#pictureHomeBtn").click(function () {
+$("#pictureHomeBtn,#nav-about,#portfolioRet").click(function () {
+    $("#portfolioSelect").show(100);
+    $("#about").show(100);
+    $("#programming").hide(0);
+    $("#video").hide(0);
+    $("#music").hide(0);
+    $("#animation").hide(0);
+    $("#live-production").hide(0);
+    $("#school").hide(0);
     $("#resumePage").hide(0);
     $("#frontPage").show(1700);
     shiftToGalleryNavBar();
@@ -27,6 +35,8 @@ $("#pictureHomeBtn").click(function () {
 // handle nav-bar
 
 function shiftToGalleryNavBar() {
+    $("#portfolioRet").hide(500);
+
     var experience = $("a[href='#experience']");
     experience.attr("href", "#about");
     experience.text("About");
@@ -48,8 +58,8 @@ function shiftToGalleryNavBar() {
     extra1.text("Animation");
     
     var extra2 = $("a[href='#extra2']");
-    extra2.attr("href", "#service");
-    extra2.text("Service");
+    extra2.attr("href", "#live-production");
+    extra2.text("Live Production");
 
     var extra3 = $("a[href='#extra3']");
     extra3.attr("href", "#school");
@@ -74,16 +84,81 @@ function shiftToResumeNavBar() {
     music.attr("href", "#skills");
     music.text("Skills");
 
+    $("#portfolioRet").show(500);
+
     var animation = $("a[href='#animation']");
     animation.attr("href", "#extra1");
     animation.text("");
 
-    var service = $("a[href='#service']");
-    service.attr("href", "#extra2");
-    service.text("");
+    var liveProduction = $("a[href='#live-production']");
+    liveProduction.attr("href", "#extra2");
+    liveProduction.text("");
 
     var school = $("a[href='#school']");
     school.attr("href", "#extra3");
     school.text("");
 
 }
+
+$("#nav-programming").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#video").hide(0);
+    $("#music").hide(0);
+    $("#animation").hide(0);
+    $("#live-production").hide(0);
+    $("#school").hide(0);
+    $("#programming").show(1700);
+});
+
+$("#nav-video").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#programming").hide(0);
+    $("#music").hide(0);
+    $("#animation").hide(0);
+    $("#live-production").hide(0);
+    $("#school").hide(0);
+    $("#video").show(1700);
+});
+
+$("#nav-music").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#programming").hide(0);
+    $("#video").hide(0);
+    $("#animation").hide(0);
+    $("#live-production").hide(0);
+    $("#school").hide(0);
+    $("#music").show(1700);
+});
+$("#nav-animation").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#programming").hide(0);
+    $("#video").hide(0);
+    $("#music").hide(0);
+    $("#live-production").hide(0);
+    $("#school").hide(0);
+    $("#animation").show(1700);
+});
+$("#nav-live-production").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#programming").hide(0);
+    $("#video").hide(0);
+    $("#music").hide(0);
+    $("#animation").hide(0);
+    $("#school").hide(0);
+    $("#live-production").show(1700);
+});
+$("#nav-school").click(function () {
+    $("#portfolioSelect").hide(0);
+    $("#about").hide(0);
+    $("#programming").hide(0);
+    $("#video").hide(0);
+    $("#music").hide(0);
+    $("#animation").hide(0);
+    $("#live-production").hide(0);
+    $("#school").show(1700);
+});
