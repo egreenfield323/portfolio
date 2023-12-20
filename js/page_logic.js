@@ -24,7 +24,7 @@ $("#pictureHomeBtn,#nav-about,#portfolioRet").click(function () {
     $("#music").hide(0);
     $("#animation").hide(0);
     $("#live-production").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#resumePage").hide(0);
     $("#frontPage").show(1700);
     shiftToGalleryNavBar();
@@ -62,8 +62,8 @@ function shiftToGalleryNavBar() {
     extra2.text("Live Production");
 
     var extra3 = $("a[href='#extra3']");
-    extra3.attr("href", "#school");
-    extra3.text("School Activities");
+    extra3.attr("href", "#gamedesign");
+    extra3.text("Game Design");
 
 }
 
@@ -94,9 +94,9 @@ function shiftToResumeNavBar() {
     liveProduction.attr("href", "#extra2");
     liveProduction.text("");
 
-    var school = $("a[href='#school']");
-    school.attr("href", "#extra3");
-    school.text("");
+    var gamedesign = $("a[href='#gamedesign']");
+    gamedesign.attr("href", "#extra3");
+    gamedesign.text("");
 
 }
 
@@ -107,7 +107,7 @@ $("#nav-programming").click(function () {
     $("#music").hide(0);
     $("#animation").hide(0);
     $("#live-production").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#programming").show(1700);
 });
 
@@ -118,7 +118,7 @@ $("#nav-video").click(function () {
     $("#music").hide(0);
     $("#animation").hide(0);
     $("#live-production").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#video").show(1700);
 });
 
@@ -129,7 +129,7 @@ $("#nav-music").click(function () {
     $("#video").hide(0);
     $("#animation").hide(0);
     $("#live-production").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#music").show(1700);
 });
 $("#nav-animation").click(function () {
@@ -139,7 +139,7 @@ $("#nav-animation").click(function () {
     $("#video").hide(0);
     $("#music").hide(0);
     $("#live-production").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#animation").show(1700);
 });
 $("#nav-live-production").click(function () {
@@ -149,10 +149,10 @@ $("#nav-live-production").click(function () {
     $("#video").hide(0);
     $("#music").hide(0);
     $("#animation").hide(0);
-    $("#school").hide(0);
+    $("#gamedesign").hide(0);
     $("#live-production").show(1700);
 });
-$("#nav-school").click(function () {
+$("#nav-gamedesign").click(function () {
     $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
@@ -160,5 +160,5 @@ $("#nav-school").click(function () {
     $("#music").hide(0);
     $("#animation").hide(0);
     $("#live-production").hide(0);
-    $("#school").show(1700);
+    $("#gamedesign").show(1700);
 });
