@@ -17,7 +17,6 @@ $("#view-gallery-btn").click(function () {
 });
 
 $("#pictureHomeBtn,#nav-about,#portfolioRet").click(function () {
-    $("#portfolioSelect").show(100);
     $("#about").show(100);
     $("#programming").hide(0);
     $("#video").hide(0);
@@ -101,7 +100,6 @@ function shiftToResumeNavBar() {
 }
 
 $("#nav-programming").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#video").hide(0);
     $("#music").hide(0);
@@ -112,7 +110,6 @@ $("#nav-programming").click(function () {
 });
 
 $("#nav-video").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
     $("#music").hide(0);
@@ -123,7 +120,6 @@ $("#nav-video").click(function () {
 });
 
 $("#nav-music").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
     $("#video").hide(0);
@@ -133,7 +129,6 @@ $("#nav-music").click(function () {
     $("#music").show(1700);
 });
 $("#nav-animation").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
     $("#video").hide(0);
@@ -143,7 +138,6 @@ $("#nav-animation").click(function () {
     $("#animation").show(1700);
 });
 $("#nav-live-production").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
     $("#video").hide(0);
@@ -153,7 +147,6 @@ $("#nav-live-production").click(function () {
     $("#live-production").show(1700);
 });
 $("#nav-gamedesign").click(function () {
-    $("#portfolioSelect").hide(0);
     $("#about").hide(0);
     $("#programming").hide(0);
     $("#video").hide(0);
