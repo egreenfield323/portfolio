@@ -497,24 +497,16 @@
                                 mainVideo2.src = src;
                                 let text = video.children[1].innerHTML;
                                 title2.innerHTML = text;
-                                if (text == "Godot Multiplayer FPS Project") {
-                                    showGodotFPSProject();
-                                } else {
-                                    hideGodotFPSProject();
-                                }
                                 let desc = video.children[2].innerHTML;
                                 description2.innerHTML = desc;
+                                if (title2.innerHTML == "Godot Multiplayer FPS Project") {
+                                    $(".godotFPSProjectDetails").show();
+                                } else {
+                                    $(".godotFPSProjectDetails").hide();
+                                }
                             };
                         };
                     });
-
-                    function showGodotFPSProject() {
-                        $(".godotFPSProjectDetails").show();
-                    }
-
-                    function hideGodotFPSProject() {
-                        $(".godotFPSProjectDetails").hide();
-                    }
 
                 </script>
 
