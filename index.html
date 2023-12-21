@@ -100,7 +100,7 @@
                 <p><b>One of the big projects</b> I had last summer (2023) was developing a program that would allow web
                     designers to generate Google FAQ Schema code to put into any webpage</p>
 
-                <img src="assets/img/faq_schema.png" style="width:40rem;height:33rem;">
+                <img src="assets/img/faq_schema.png" style="max-width: 100%; height: auto;">
 
                 <p>The program allows users to enter important keywords and paragraphs, and generate code to put in the
                     &lt;head&gt; which makes the page stand out in Google search results</p>
@@ -109,7 +109,7 @@
                     website with that knowledge, too. I love learning new languages</p>
 
 
-                <img src="assets/img/portfolio_github_view.png" style="width:18rem;height:7rem;">
+                <img src="assets/img/portfolio_github_view.png" style="max-width: 100%; height: auto;">
                 <br>
                 <hr>
                 <br>
@@ -119,7 +119,7 @@
                         and favorite them to your list</p>
                     <a href="https://github.com/egreenfield323/CS222-Final" target="_blank">GitHub repository</a>
                 </div>
-                <img src="assets/img/cs222_project.png" style="width:33rem;height:60rem;">
+                <img src="assets/img/cs222_project.png" style="max-width: 100%; height: auto;">
                 <br>
 
 
@@ -415,12 +415,154 @@
 
                 <p>Here is a small gallery of projects I have made/am working on</p>
 
+                <div class="videoPlaylistContainer2">
 
+                    <div class="gallery-front-video2">
+                        <div class="gallery-video2">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213529&authkey=!AGCZ261I_eGGAUY"
+                                controls></video>
+                            <h3 class="video-gallery-title2">Unreal Engine 5 Environment</h3>
+                            <p class="video-gallery-description2" style="display: flex">I made this video (and music) to
+                                showcase a level I made in Unreal Engine 5.</p>
+                        </div>
+                    </div>
+                    <div class="video-gallery-list2">
+
+                        <div class="playlist-vid2 active2">
+                            <video
+                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213529&authkey=!AGCZ261I_eGGAUY"></video>
+                            <h3 class="video-gallery-title2">Unreal Engine 5 Environment</h3>
+                            <p class="video-gallery-description2" style="display: none">I made this video (and music) to
+                                showcase a level I made in Unreal Engine 5.</p>
+                        </div>
+                        <div class="playlist-vid2">
+                            <video src="assets/img/space_flyover.mp4"></video>
+                            <h3 class="video-gallery-title2">Star Wars Planet</h3>
+                            <p class="video-gallery-description2" style="display: none">I created this in Unreal Engine
+                                5 to test particle systems, and planet creation.</p>
+                        </div>
+                        <div class="playlist-vid2">
+                            <video src="assets/img/ball_water_physics.mp4"></video>
+                            <h3 class="video-gallery-title2">Unreal Engine Water Physics</h3>
+                            <p class="video-gallery-description2" style="display: none">This is a demo of water physics
+                                I was working on in Unreal Engine 4.</p>
+                        </div>
+                        <div class="playlist-vid2">
+                            <video src="assets/img/godot_showcase/godot_showcase_01.mp4"></video>
+                            <h3 class="video-gallery-title2">Godot Multiplayer FPS Project</h3>
+                            <div class="video-gallery-description2" style="display: none">
+                                <p>This showcases me testing the multiplayer system for an FPS game I started working on
+                                    using native Godot 4.1. In this video, my friend from out of state is connected to
+                                    my server. I use Blender to create the models.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="godotFPSProjectDetails" style="display: none">
+                    <br>
+                    <p>This was my first project using Godot.</p>
+                    <br>
+                    <p>I am currently working on adding a menu system for players so they can pause the game, host and
+                        join games, and change a few gameplay settings.</p>
+                    <img src="assets/img/godot_showcase/godot_showcase_01.png"
+                        style="max-width: 100%; height: auto;"></img>
+                    <br>
+                    <p>Picture of my prototype game map with collisions. Made quickly with particle systems in Blender.
+                    </p>
+                    <img src="assets/img/godot_showcase/godot_showcase_02.png"
+                        style="max-width: 100%; height: auto;"></img>
+                    <br>
+                    <p>Setting up networking for multiplayer was pretty straightforward to learn with Godot 4.1. This is
+                        a sample of my code handling the networking for UPNP.</p>
+                    <img src="assets/img/godot_showcase/godot_showcase_03.png"
+                        style="max-width: 100%; height: auto;"></img>
+                </div>
+
+                <script>
+
+                    let listVideo2 = document.querySelectorAll('.video-gallery-list2 .playlist-vid2');
+                    let mainVideo2 = document.querySelector('.gallery-front-video2 video');
+                    let title2 = document.querySelector('.gallery-front-video2 .video-gallery-title2');
+                    let description2 = document.querySelector('.gallery-front-video2 .video-gallery-description2');
+
+                    listVideo2.forEach(video => {
+                        video.onclick = () => {
+                            listVideo2.forEach(vid => vid.classList.remove('active2'));
+                            video.classList.add('active2');
+                            if (video.classList.contains('active2')) {
+                                let src = video.children[0].getAttribute('src');
+                                mainVideo2.src = src;
+                                let text = video.children[1].innerHTML;
+                                title2.innerHTML = text;
+                                if (text == "Godot Multiplayer FPS Project") {
+                                    showGodotFPSProject();
+                                } else {
+                                    hideGodotFPSProject();
+                                }
+                                let desc = video.children[2].innerHTML;
+                                description2.innerHTML = desc;
+                            };
+                        };
+                    });
+
+                    function showGodotFPSProject() {
+                        $(".godotFPSProjectDetails").show();
+                    }
+
+                    function hideGodotFPSProject() {
+                        $(".godotFPSProjectDetails").hide();
+                    }
+
+                </script>
 
 
                 <hr>
                 <h3>Physical</h3>
+                <h4>DNS Directors</h4>
+                <p>As a part of an Intro to Game Design course I took, I made a board game called "DNS Directors".</p>
+                <p><a href="">Here</a> is a link to the downloadable print-n-play pdf of my game. The PDF contains the
+                    rules, and supplies needed to play the game.</p>
+                <p>For a general rundown:</p>
+                <h5>Overview</h5>
+                <p>Become an engineer of the internet and race to send clients to their requested website before your
+                    opponents do!</p>
+                <h5>Setup</h5>
+
+                <img src="assets/img/physical_games/"
+                        style="max-width: 100%; height: auto;"></img>
+
+                <ul>
+                    <li>Shuffle the deck of cable cards and lay them out to form the starting array of cables.</li>
+                    <ul>
+                        <li>2 players → 3x3</li>
+                        <li>3-4 players → 4x4</li>
+                    </ul>
+                    The remaining cable cards go into a side deck.
+                    <li>Shuffle the destination cards and place three of them on each side of the cable array.</li>
+                    <li>Take the request cards and make four decks for each side.</li>
+                    <ul>
+                        <li>The three request card decks should correspond to the destination cards of each side.</li>
+                        <li>Ex: A side with destinations Youtube, Bing, and Google would have Youtube, Bing, and Google in their request cards deck.</li>
+                    </ul>
+
+                </ul>
+                <h5>Gameplay</h5>
+                <p>At the beginning of the game, every player draws one card from everybody’s request deck. These decks
+                    should have the same number of cards as the number of players, minus one. These are the requests
+                    that players must complete.</p>
+                <p>A player has <b>these options</b> when it is their turn.</p>
+                <ul>
+                    <li>Draw a cable card if they have less than 3 in their hand (free).</li>
+                    <li>Rotate a cable card.</li>
+                    <li>Play a new cable card.</li>
+                    <li>Begin sending a signal (free use. Does not take a full turn).</li>
+                </ul>
+
                 <hr>
+
             </div>
         </section>
         <hr class="m-0" />

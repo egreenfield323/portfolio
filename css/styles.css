@@ -12944,3 +12944,105 @@ audio {
   }
 
 }
+
+
+
+/* video playlist 2 styling */
+
+.videoPlaylistContainer2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 5px 5%;
+}
+
+.videoPlaylistContainer2 .gallery-front-video2 {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.videoPlaylistContainer2 .gallery-front-video2 video {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.videoPlaylistContainer2 .gallery-front-video2 .video-gallery-title2 {
+  color: 333;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 {
+  background: #fff;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2::-webkit-scrollbar {
+  width: 7px;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 50px;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2 video {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2:hover {
+  background: #eee;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2.active2 {
+  background: rgb(189, 93, 56);
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2.active2 .video-gallery-title2 {
+  color: #fff;
+}
+
+.videoPlaylistContainer2 .video-gallery-list2 .playlist-vid2 .video-gallery-title2 {
+  color: #333;
+  font-size: 17px;
+}
+
+@media (max-width:991px) {
+
+  .videoPlaylistContainer2 {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .videoPlaylistContainer2 {
+    grid-template-columns: 1fr;
+  }
+
+}
