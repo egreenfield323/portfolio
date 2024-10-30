@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Evan Greenfield - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/computer.png" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="sideNav" style="display:flex;">
+        <a class="navbar-brand js-scroll-trigger" id="pictureHomeBtn" href="index.html">
+            <span class="d-block d-lg-none">Evan Greenfield</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.png"
+                    alt="Picture of me" />
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-about" href="index.html">About</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-programming"
+                        href="programming.html">Programming</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-video" href="video.html">Video</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-music" href="music.html">Music</a>
+                </li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-animation"
+                        href="animation.html">Animation</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-live-production"
+                        href="live-production.html">Live Production</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" id="nav-gamedesign"
+                        href="game-design.html">Game
+                        Design</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Live Production -->
+    <div class="container-fluid">
+        <section class="resume-section" id="live-production">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Live Production</h2>
+                <p>I have been doing live production as long as I have been doing music.</p>
+                <p>In <b>middle school</b> I was the sound head for the theatre, and in <b>high school</b> I was the
+                    lighting head. I also designed a few sets for productions in high school.</p>
+
+                <img src="assets/img/live_prod/ms_sound.JPG" style="max-width: 30%; height: auto;"></img>
+                <img src="assets/img/live_prod/hs_lights.JPG" style="max-width: 30%; height: auto;"></img>
+                <img src="assets/img/live_prod/hs_catwalks.JPG" style="max-width: 30%; height: auto;"></img>
+
+                <br>
+
+                <p>I designed the set and lighting for one of our high school plays, called <b>"These Shining Lives"</b>
+                </p>
+                <p>Here is the set design:</p>
+                <br>
+
+                <img src="assets/img/live_prod/shining_lives_set_01.png" style="max-width: 30%; height: auto;"></img>
+                <br>
+
+                <p>I also designed the set and lighting for one of our high school musicals, called <b>"Chicago"</b></p>
+                <p>CAD render of my set design:</p>
+                <br>
+
+                <img src="assets/img/live_prod/chicago_set_01.png" style="max-width: 30%; height: auto;"></img>
+                <img src="assets/img/live_prod/chicago_set_02.png" style="max-width: 30%; height: auto;"></img>
+                <br>
+
+                <p>Here are pictures of my lighting and set design in person:</p>
+
+
+                <style>
+                    .chicagoContainer {
+                        position: relative;
+                        max-width: 60%;
+                        height: auto;
+                    }
+
+                    .mySlides {
+                        display: none;
+                    }
+
+                    .cursor {
+                        cursor: pointer;
+                    }
+
+                    /* Next & previous buttons */
+                    .prev,
+                    .next {
+                        cursor: pointer;
+                        position: absolute;
+                        top: 40%;
+                        width: auto;
+                        padding: 16px;
+                        margin-top: -50px;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 20px;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                        -webkit-user-select: none;
+                    }
+
+                    /* Position the "next button" to the right */
+                    .next {
+                        right: 0;
+                        border-radius: 3px 0 0 3px;
+                    }
+
+                    /* On hover, add a black background color with a little bit see-through */
+                    .prev:hover,
+                    .next:hover {
+                        background-color: rgba(0, 0, 0, 0.8);
+                    }
+
+                    /* Number text (1/3 etc) */
+                    .numbertext {
+                        color: #f2f2f2;
+                        font-size: 12px;
+                        padding: 8px 12px;
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    /* Container for image text */
+                    .caption-container {
+                        text-align: left;
+                        background-color: #222;
+                        padding: 2px 16px;
+                        color: white;
+                    }
+
+                    .row:after {
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+
+                    /* five columns side by side */
+                    .column {
+                        float: left;
+                        width: 20%;
+                    }
+
+                    /* Add a transparency effect for thumnbail images */
+                    .demo {
+                        opacity: 0.6;
+                    }
+
+                    .active,
+                    .demo:hover {
+                        opacity: 1;
+                    }
+                </style>
+
+                <body>
+
+
+                    <div class="chicagoContainer">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 5</div>
+                            <img src="assets/img/live_prod/chicago_01.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 5</div>
+                            <img src="assets/img/live_prod/chicago_02.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 5</div>
+                            <img src="assets/img/live_prod/chicago_03.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 5</div>
+                            <img src="assets/img/live_prod/chicago_04.jpg" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">5 / 5</div>
+                            <img src="assets/img/live_prod/chicago_05.jpg" style="width:100%">
+                        </div>
+
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="assets/img/live_prod/chicago_01.jpg" style="width:100%"
+                                    onclick="currentSlide(1)" alt="Opening number">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="assets/img/live_prod/chicago_02.jpg" style="width:100%"
+                                    onclick="currentSlide(2)" alt="Cell block tango">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="assets/img/live_prod/chicago_03.jpg" style="width:100%"
+                                    onclick="currentSlide(3)" alt="Cell block tango wide shot">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="assets/img/live_prod/chicago_04.jpg" style="width:100%"
+                                    onclick="currentSlide(4)" alt="Amos and Billy">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="assets/img/live_prod/chicago_05.jpg" style="width:100%"
+                                    onclick="currentSlide(5)" alt="Jail cells flown in">
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("demo");
+                            let captionText = document.getElementById("caption");
+                            if (n > slides.length) { slideIndex = 1 }
+                            if (n < 1) { slideIndex = slides.length }
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " active";
+                            captionText.innerHTML = dots[slideIndex - 1].alt;
+                        }
+                    </script>
+
+                    <p style="font-size: small;">Photos taken by <a href="https://hcbphotography.smugmug.com/"
+                            target="_blank">Heidi Bottomley</a></p>
+
+                    <br>
+                    <p>Apart from school, I have ran sound for countless church services, starting around the age of 6.
+                    </p>
+
+                    <img src="assets/img/live_prod/church_01.JPG" style="max-width: 30%; height: auto;"></img>
+
+                    <!--pictures of me running sound at church-->
+
+                    <p>During COVID, I ran all church livestreams with my dad from my bedroom.</p>
+
+                    <img src="assets/img/live_prod/church_home_01.JPG" style="max-width: 30%; height: auto;"></img>
+                    <img src="assets/img/live_prod/church_home_02.JPG" style="max-width: 30%; height: auto;"></img>
+                    <!--pictures of me running church livestreams at home-->
+
+
+                    <p>When we started meeting again in person, I advised the church on what equipment we should get,
+                        and trained youth on the equipment, as I would soon be gone for college.</p>
+
+                    <img src="assets/img/live_prod/church_stream_01.JPG" style="max-width: 30%; height: auto;"></img>
+                    <img src="assets/img/live_prod/church_stream_02.JPG" style="max-width: 30%; height: auto;"></img>
+                    <img src="assets/img/live_prod/church_stream_03.jpg" style="max-width: 30%; height: auto;"></img>
+
+
+                    <!--pictures of me running church livestreams in person-->
+
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
