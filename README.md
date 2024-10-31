@@ -1,6 +1,6 @@
 # Evan's portfolio
 
-## Live link: https://egreenfield323.github.io/portfolio/
+## Live link: https://evangreenfield.dev
 
 Welcome to my portfolio!
 
