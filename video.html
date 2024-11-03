@@ -64,75 +64,69 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">Video</h2>
                 <h4>Click on videos to enlarge them.<b> Click on the video again to close out.</b></h3>
-                <h4 style="color: crimson; font-size: 14px">Videos might take a while to load due to budget file
-                    hosting! Consider downloading them or waiting to play them.</h4>
                     <hr>
-                <div class="videoGallery">
-                    <p style="font-size:x-large;">I have been editing videos since I was little. Here are some of the
-                        videos I have edited/produced. I also did all audio mixing and mastering.</p>
-                    <p>A few notes:
-                    <ul>
-                        <li>When the COVID pandemic hit, I volunteered to create virtual band and choir videos for our
-                            high school. A few of those videos are below.</li>
-                        <li>I frequently use programs like Premiere Pro, Davinci Resolve/Fusion, After Effects,
-                            Audition, and Final Cut Pro to edit videos.</li>
-                        <li>If you want to see the full versions of the videos in my gallery, I have left some of them
-                            <a href="https://1drv.ms/f/s!AleyBkk22OABmyiVuuY4V8-KchXs?e=MtmWyk"
-                                target="_blank">here</a>.</li>
-                    </ul>
-                    </p>
+                    <div class="videoGallery">
+                        <p style="font-size:x-large;">I have been editing videos since I was little. Here are some of
+                            the
+                            videos I have edited/produced. I also did all audio mixing and mastering.</p>
+                        <p>A few notes:
+                        <ul>
+                            <li>When the COVID pandemic hit, I volunteered to create virtual band and choir videos for
+                                our
+                                high school. A few of those videos are below.</li>
+                            <li>I frequently use programs like Premiere Pro, Davinci Resolve/Fusion, After Effects,
+                                Audition, and Final Cut Pro to edit videos.</li>
+                            <li>If you want to see the full versions of the videos in my gallery, I have left some of
+                                them
+                                <a href="https://1drv.ms/f/s!AleyBkk22OABmyiVuuY4V8-KchXs?e=MtmWyk"
+                                    target="_blank">here</a>.
+                            </li>
+                        </ul>
+                        </p>
 
-                    <div class="video-container">
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213490&authkey=!ANiMAay1YAVE5iM#t=13"
-                                type='video/mp4'></video>
-                        </div>
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213491&authkey=!AAZhfNAFZa2Bz-8#t=5"
-                                type='video/mp4'></video>
-                        </div>
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213492&authkey=!AJu3zh-jgR1ZwQE#t=5"></video>
-                        </div>
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213493&authkey=!AJMG27Ofq31owjA#t=5"></video>
-                        </div>
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213494&authkey=!AOAwcC-n7Qplr_0#t=5"></video>
-                        </div>
-                        <div class="galleryVideo">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213495&authkey=!AD6-8E6Rchq9lqU#t=5"></video>
-                        </div>
-                    </div>
-                </div>
+                        <div class="video-container" id="videoGallery"></div>
 
-                <script>
-                    var video = document.querySelectorAll('video');
+                        <script>
+                            // Array of YouTube video URLs
+                            const youtubeVideos = [
+                                "https://youtu.be/FjqpCj6BhTI",
+                                "https://youtu.be/gKyzdyaFgVM",
+                                "https://youtu.be/QrFSPUKVaKY",
+                                "https://youtu.be/vD8qs8g-uoo",
+                                "https://youtu.be/KL9hWscUVjM",
+                                "https://youtu.be/y1qH6xNa74M",
+                            ];
 
-                    video.forEach(play => play.addEventListener('click', () => {
-                        play.classList.toggle('active');
+                            // Function to generate video thumbnails
+                            function createVideoGallery() {
+                                const gallery = document.getElementById("videoGallery");
 
-                        if (play.hasAttribute("controls")) {
-                            play.removeAttribute("controls");
-                            play.pause();
-                            play.currentTime = 5;
-                        } else {
-                            play.setAttribute("controls", true);
-                            play.currentTime = 0;
-                            setTimeout(() => {
-                                play.play().catch(error => {
+                                youtubeVideos.forEach((url, index) => {
+                                    const videoId = getYouTubeID(url);
+                                    const videoDiv = document.createElement("div");
+                                    videoDiv.className = "galleryVideo";
+                                    videoDiv.innerHTML = `<img src="https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp" alt="YouTube Video Thumbnail ${index + 1}" style="scale: 1; cursor: pointer; width: 100%; height: 100%; object-fit: cover; display: block; margin: auto;" onclick="loadYouTubeVideo('${videoId}', ${index})">`;
+                                    gallery.appendChild(videoDiv);
                                 });
-                            }, 0);
-                        }
-                    }));
-                </script>
-            </div>
+                            }
+
+                            // Function to get the video ID from a YouTube URL
+                            function getYouTubeID(url) {
+                                const regExp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+                                const match = url.match(regExp);
+                                return (match && match[1]) ? match[1] : null;
+                            }
+
+                            // Function to load the YouTube iframe when thumbnail is clicked
+                            function loadYouTubeVideo(videoId, index) {
+                                const videoDiv = document.getElementsByClassName("galleryVideo")[index];
+                                videoDiv.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> </iframe>`;
+                            }
+
+                            // Initialize the gallery on page load
+                            createVideoGallery();
+                        </script>
+                    </div>
         </section>
     </div>
 
