@@ -87,7 +87,7 @@
                         <div class="video-container" id="videoGallery"></div>
 
                         <script>
-                            // Array of YouTube video URLs
+                            // YouTube video URLs
                             const youtubeVideos = [
                                 "https://youtu.be/FjqpCj6BhTI",
                                 "https://youtu.be/gKyzdyaFgVM",
@@ -97,7 +97,7 @@
                                 "https://youtu.be/y1qH6xNa74M",
                             ];
 
-                            // Function to generate video thumbnails
+                            // generate video thumbnails
                             function createVideoGallery() {
                                 const gallery = document.getElementById("videoGallery");
 
@@ -110,20 +110,19 @@
                                 });
                             }
 
-                            // Function to get the video ID from a YouTube URL
+                            // get the video ID from a YouTube URL
                             function getYouTubeID(url) {
                                 const regExp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
                                 const match = url.match(regExp);
                                 return (match && match[1]) ? match[1] : null;
                             }
 
-                            // Function to load the YouTube iframe when thumbnail is clicked
+                            // load the YouTube iframe when thumbnail is clicked
                             function loadYouTubeVideo(videoId, index) {
                                 const videoDiv = document.getElementsByClassName("galleryVideo")[index];
                                 videoDiv.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&rel=0&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen> </iframe>`;
                             }
 
-                            // Initialize the gallery on page load
                             createVideoGallery();
                         </script>
                     </div>
