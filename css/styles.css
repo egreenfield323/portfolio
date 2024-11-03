@@ -12960,6 +12960,19 @@ section.resume-section .resume-section-content {
   transform: scale(1.3);
 }
 
+@media (max-width: 768px) {
+  .videoGallery .videoGalleryHeading {
+    font-size: 2rem; /* Reduces heading size on smaller screens */
+    margin: 1.5rem 0;
+  }
+
+  .video-container .galleryVideo {
+    width: 90%; /* Makes video container almost full-width on mobile */
+    height: auto; /* Allows height to adjust based on content */
+    margin: 1rem auto;
+  }
+}
+
 .video-container .galleryVideo .active {
   position: fixed;
   top: 50%;
