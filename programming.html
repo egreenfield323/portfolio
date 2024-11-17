@@ -78,19 +78,32 @@
                     Work projects
                     <span class="collapseArrow">&#11166;</span>
                 </button>
-                <div id="content1" class="collapsedContent">
-                    <br>
-                    <p><b>One of the big projects</b> I had last summer (2023) was developing a program that would allow
-                        web designers to generate Google FAQ Schema code to put into any webpage</p>
-                    <img src="assets/img/faq_schema.png" style="max-width: 60%; height: auto;">
-                    <p>The program allows users to enter important keywords and paragraphs, and generate code to put in
-                        the &lt;head&gt; which makes the page stand out in Google search results</p>
-                    <br><br>
-                    <p>With my time at <b>State Farm</b>, I learned <b>HTML, CSS, Javascript, and jQuery</b>. I created
-                        this website with that knowledge, too. I love learning new languages</p>
-                    <img src="assets/img/portfolio_github_view.png" style="max-width: 45%; height: auto;">
+
+                <div id="content1" class="collapsedContent collapsedContentBackground">
+                    <h2>One of My Big Projects</h2>
+                    <p>
+                        One of the big projects I had last summer (2023) was developing a program that allows
+                        web designers to generate Google FAQ Schema code for any webpage.
+                    </p>
+                    <img class="collapsedContentImg" src="assets/img/faq_schema.png" alt="FAQ Schema Project Screenshot"
+                        style="max-width: 60%; height: auto;">
+                    <p>
+                        The program lets B2B users input keywords and paragraphs to generate code for the
+                        &lt;head&gt;, making their page appear in Google search results and FAQs.
+                    </p>
+
+                    <h2>Skills and Experience</h2>
+                    <p>
+                        During my time at <strong>State Farm</strong>, I learned <strong>HTML, CSS, JavaScript, and
+                            jQuery</strong>.
+                        I also used this knowledge to create this website. I enjoy learning new programming languages
+                        and techniques!
+                    </p>
+                    <img class="collapsedContentImg" src="assets/img/portfolio_github_view.png"
+                        alt="Portfolio GitHub View" style="max-width: 45%; height: auto;">
                     <hr>
                 </div>
+
 
                 <br>
 
@@ -102,9 +115,10 @@
                     I have used several languages (including markup and typescript) and technology, including
                 <ul>
                     <li>Java</li>
-                    <li>JavaScript</li>
+                    <li>JavaScript/React</li>
                     <li>C</li>
                     <li>Dart / Flutter</li>
+                    <li>Kotlin / Jetpack Compose</li>
                     <li>Assembly (pep9)</li>
                     <li>HTML, CSS, Tailwind (css)</li>
                 </ul>
@@ -119,18 +133,21 @@
                     <span class="collapseArrow">&#11166;</span>
                 </button>
 
-                
+
                 <div id="content2" class="collapsedContent">
                     <br>
 
-                    <div id="github-gallery" class="row"></div> <!-- Container for GitHub cards -->
+                    <div id="school-github-gallery" class="row collapsedContentBackground"></div>
+                    <!-- Container for GitHub cards -->
 
                     <script>
                         // List of GitHub repositories with optional image URLs
-                        const repos = [
-                            ["https://github.com/egreenfield323/CS222-Final", "assets/img/cs222_project.png"],
+                        const schoolRepos = [
+                            ["https://github.com/egreenfield323/CS222-Final", "assets/img/programming/cs222 final proj.webp"],
                             ["https://github.com/egreenfield323/c-parser-project", "assets/img/programming/C parser thumb.webp"],
-                            ["https://github.com/egreenfield323/call-center-simulator", "assets/img/programming/Call center thumb.webp"]
+                            ["https://github.com/egreenfield323/call-center-simulator", "assets/img/programming/Call center thumb.webp"],
+                            ["https://github.com/egreenfield323/airline-booking-system-public", "assets/img/programming/airline system jdbc.webp"],
+                            ["https://github.com/egreenfield323/MMP305-3DS-sound-recorder", "assets/img/programming/DS recorder.webp"]
                         ];
 
                         async function fetchRepoDetails([repoUrl, imageUrl]) {
@@ -153,19 +170,16 @@
                                     </div>
                                     </div>
                                     `;
-                                document.getElementById("github-gallery").appendChild(card);
+                                document.getElementById("school-github-gallery").appendChild(card);
                             } catch (error) {
                                 console.error("Error fetching repository details:", error);
                             }
                         }
 
                         // Fetch details for each repository in the list
-                        repos.forEach(fetchRepoDetails);
+                        schoolRepos.forEach(fetchRepoDetails);
                     </script>
 
-                    <p>My freshman Spring semester, myself and three other computer science students made this program
-                        with <b>Dart and Flutter</b>. It pulls from the RAWG API to display upcoming games, search for
-                        any game, and favorite them to your list</p>
                     <br>
                 </div>
 
@@ -181,30 +195,50 @@
                     <span class="collapseArrow">&#11166;</span>
                 </button>
                 <div id="content3" class="collapsedContent">
+
                     <br>
-                    <h3 style="margin-top: 50;">Twitch streaming service clone</h3>
-                    <a class="social-icon-lg" style="margin:5px;" target="_blank"
-                        href="https://github.com/egreenfield323/next14-tidefy"><i class="fab fa-github"></i></a>
-                    <a class="social-icon-lg" style="margin:5px;" target="_blank"
-                        href="https://github.com/egreenfield323/next14-tidefy"><i
-                            class="fa-solid fa-laptop-code"></i></a>
-                    <br>
-                    <p>Originally named Tidefy and now themed off a crab, this is a Next.js application I created
-                        following along to tutorials made by <a href="https://www.codewithantonio.com/"
-                            target="_blank">Code with Antonio.</a></p>
-                    <p>This program uses several technologies, such as:</p>
-                    <ul>
-                        <li>Tailwind.css</li>
-                        <li>React.js</li>
-                        <li>Next.js</li>
-                        <li>MySQL</li>
-                        <li>Prisma</li>
-                        <li>Ngrok</li>
-                    </ul>
-                    <p>And has features that popular streaming platforms have too.</p>
-                    <p>The database to this project was recently slept, however the GitHub repository is <a
-                            href="https://github.com/egreenfield323/next14-tidefy" target="_blank">here.</a></p>
-                    <img src="assets/img/programming/crabby.png" style="max-width: 70%; height:auto; margin-top:15px;">
+                    <div id="personal-github-gallery" class="row collapsedContentBackground"></div>
+                    <!-- Container for GitHub cards -->
+
+                    <script>
+                        // List of GitHub repositories with optional image URLs
+                        const personalRepos = [
+                            ["https://github.com/egreenfield323/portfolio", "assets/img/programming/portfolio repo thumb.png"],
+                            ["https://github.com/egreenfield323/slawg-lang", "assets/img/programming/slawg lang repo img.webp"],
+                            ["https://github.com/egreenfield323/next14-streaming-service/tree/main", "assets/img/programming/twitch clone repo thumb.png"],
+                            ["https://github.com/egreenfield323/mandelbrot-viewer", "assets/img/programming/mandelbrot repo thumb.png"],
+                            ["https://github.com/egreenfield323/blackjack", "assets/img/programming/blackjack repo thumb.png"]
+                        ];
+
+                        async function fetchRepoDetails([repoUrl, imageUrl]) {
+                            try {
+                                const [owner, repo] = repoUrl.replace("https://github.com/", "").split("/");
+                                const repoResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+                                const repoData = await repoResponse.json();
+                                const userResponse = await fetch(`https://api.github.com/users/${owner}`);
+                                const userData = await userResponse.json();
+                                const imageSrc = imageUrl ? imageUrl : userData.avatar_url;
+                                const card = document.createElement("div");
+                                card.className = "col-md-4 mb-4";
+                                card.innerHTML = `<div class="card">
+                                <img src="${imageSrc}" class="card-img-top" alt="${owner}'s profile picture or custom image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${repoData.name}</h5>
+                                    <p class="card-text">${repoData.description || "No description available"}</p>
+                                    <p class="card-text"><small class="text-muted">By ${repoData.owner.login}</small></p>
+                                    <a href="${repoUrl}" target="_blank" class="btn btn-primary">View Repository</a>
+                                    </div>
+                                    </div>
+                                    `;
+                                document.getElementById("personal-github-gallery").appendChild(card);
+                            } catch (error) {
+                                console.error("Error fetching repository details:", error);
+                            }
+                        }
+
+                        // Fetch details for each repository in the list
+                        personalRepos.forEach(fetchRepoDetails);
+                    </script>
                     <br>
                 </div>
             </div>
