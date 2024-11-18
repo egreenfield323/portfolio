@@ -70,53 +70,102 @@
 
                 <p>Here is a small gallery of projects I have made/am working on</p>
 
-                <div class="videoPlaylistContainer2">
-
-                    <div class="gallery-front-video2">
-                        <div class="gallery-video2">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213529&authkey=!AGCZ261I_eGGAUY"
-                                controls></video>
-                            <h3 class="video-gallery-title2">Unreal Engine 5 Environment</h3>
-                            <p class="video-gallery-description2" style="display: flex">I made this video (and music) to
-                                showcase a level I made in Unreal Engine 5.</p>
-                        </div>
+                <div class="video-gallery-container">
+                    <div class="main-video-section">
+                        <iframe class="main-video" src="" frameborder="0" allowfullscreen></iframe>
+                        <h3 class="video-title"></h3>
+                        <p class="video-description"></p>
                     </div>
-                    <div class="video-gallery-list2">
-
-                        <div class="playlist-vid2 active2">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213529&authkey=!AGCZ261I_eGGAUY"></video>
-                            <h3 class="video-gallery-title2">Unreal Engine 5 Environment</h3>
-                            <p class="video-gallery-description2" style="display: none">I made this video (and music) to
-                                showcase a level I made in Unreal Engine 5.</p>
-                        </div>
-                        <div class="playlist-vid2">
-                            <video src="assets/img/space_flyover.mp4"></video>
-                            <h3 class="video-gallery-title2">Star Wars Planet</h3>
-                            <p class="video-gallery-description2" style="display: none">I created this in Unreal Engine
-                                5 to test particle systems, and planet creation.</p>
-                        </div>
-                        <div class="playlist-vid2">
-                            <video src="assets/img/ball_water_physics.mp4"></video>
-                            <h3 class="video-gallery-title2">Unreal Engine Water Physics</h3>
-                            <p class="video-gallery-description2" style="display: none">This is a demo of water physics
-                                I was working on in Unreal Engine 4.</p>
-                        </div>
-                        <div class="playlist-vid2">
-                            <video src="assets/img/godot_showcase/godot_showcase_01.mp4"></video>
-                            <h3 class="video-gallery-title2">Godot Multiplayer FPS Project</h3>
-                            <div class="video-gallery-description2" style="display: none">
-                                <p>This showcases me testing the multiplayer system for an FPS game I started working on
-                                    using native Godot 4.1. In this video, my friend from out of state is connected to
-                                    my server. I use Blender to create the models.</p>
-                            </div>
-                        </div>
-
-                    </div>
+                    <div class="playlist-section"></div>
                 </div>
 
-                <div class="godotFPSProjectDetails" style="display: none">
+                <script>
+                    // Array of YouTube videos with URLs, titles, descriptions, and extended descriptions
+                    const videos = [
+                        {
+                            url: "https://youtube.com/embed/H2hYeWDStBg",
+                            title: "2D Platformer/Combat Game",
+                            description: "This is a gameplay video of a project I made for a game programming class. This game was made in Godot 4.3. Scroll down for more info",
+                            extendedDesc: "platformerProjectDetails"
+                        },
+                        {
+                            url: "https://youtube.com/embed/RJrrclcONqw",
+                            title: "Godot Multiplayer FPS Project",
+                            description: "This showcases me testing the multiplayer system for an FPS game I started working on using native Godot 4.1. In this video, my friend from out of state is connected to my server. I use Blender to create the models. Scroll down for more info",
+                            extendedDesc: "godotFPSProjectDetails"
+                        },
+                        {
+                            url: "https://www.youtube.com/embed/iajSZa3JzDE",
+                            title: "Unreal Engine 5 Environment",
+                            description: "I made this video (and music) to showcase a level I made in Unreal Engine 5.",
+                            extendedDesc: null
+                        },
+                        {
+                            url: "https://www.youtube.com/embed/jF0eSjrVSgI",
+                            title: "Star Wars Planet",
+                            description: "I created this in Unreal Engine 5 to test particle systems, and planet creation.",
+                            extendedDesc: null
+                        },
+                        {
+                            url: "https://www.youtube.com/embed/zbmAGR4nQBY",
+                            title: "Unreal Engine Water Physics",
+                            description: "This is a demo of water physics I was working on in Unreal Engine 4.",
+                            extendedDesc: null
+                        }
+                    ];
+
+                    const mainVideo = document.querySelector('.main-video');
+                    const mainTitle = document.querySelector('.video-title');
+                    const mainDescription = document.querySelector('.video-description');
+                    const playlistSection = document.querySelector('.playlist-section');
+
+                    function loadVideo(video, index) {
+                        mainVideo.src = video.url + "?rel=0&modestbranding=1";
+                        mainTitle.textContent = video.title;
+                        mainDescription.textContent = video.description;
+
+                        document.querySelectorAll('.extended-description').forEach(div => {
+                            div.style.display = 'none';
+                        });
+
+                        if (video.extendedDesc) {
+                            const extendedDiv = document.getElementById(video.extendedDesc);
+                            if (extendedDiv) {
+                                extendedDiv.style.display = 'block';
+                            }
+                        }
+
+                        document.querySelectorAll('.playlist-video').forEach((vid, idx) => {
+                            vid.classList.toggle('active', idx === index);
+                        });
+                    }
+
+                    videos.forEach((video, index) => {
+                        const videoElement = document.createElement('div');
+                        videoElement.classList.add('playlist-video');
+                        if (index === 0) videoElement.classList.add('active');
+
+                        const thumbnail = document.createElement('img');
+                        const videoId = video.url.split('/embed/')[1];
+                        thumbnail.src = `https://img.youtube.com/vi/${videoId}/0.jpg`; // YouTube Thumbnail URL
+                        thumbnail.alt = video.title;
+                        thumbnail.classList.add('playlist-thumbnail');
+
+                        const title = document.createElement('span');
+                        title.textContent = video.title;
+                        title.classList.add('playlist-title');
+
+                        videoElement.appendChild(thumbnail);
+                        videoElement.appendChild(title);
+                        playlistSection.appendChild(videoElement);
+
+                        videoElement.addEventListener('click', () => loadVideo(video, index));
+                    });
+
+                    loadVideo(videos[0], 0);
+                </script>
+
+                <div id="godotFPSProjectDetails" class="extended-description" style="display: none;">
                     <br>
                     <p>This was my first project using Godot.</p>
                     <br>
@@ -134,6 +183,71 @@
                         a sample of my code handling the networking for UPNP.</p>
                     <img src="assets/img/godot_showcase/godot_showcase_03.png"
                         style="max-width: 100%; height: auto;"></img>
+                </div>
+
+                <div id="platformerProjectDetails" class="extended-description" style="display: block;">
+                    <br>
+                    <p>This was my midterm project for Ball State's CS315: Game Programming course</p>
+
+                    <p><strong>Here is the Github repository to the project</strong></p>
+                    <br>
+
+                    <div id="cs315-platformer-github"></div>
+                    <!-- Container for GitHub cards -->
+
+                    <script>
+                        // List of GitHub repositories with optional image URLs
+                        const schoolRepos = [
+                            ["https://github.com/egreenfield323/CS315-Project-2", "assets/img/game_design_imgs/platformer/platformer repo thumb.png"],
+                        ];
+
+                        async function fetchRepoDetails([repoUrl, imageUrl]) {
+                            try {
+                                const [owner, repo] = repoUrl.replace("https://github.com/", "").split("/");
+                                const repoResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+                                const repoData = await repoResponse.json();
+                                const userResponse = await fetch(`https://api.github.com/users/${owner}`);
+                                const userData = await userResponse.json();
+                                const imageSrc = imageUrl ? imageUrl : userData.avatar_url;
+                                const card = document.createElement("div");
+                                card.className = "col-md-4 mb-4";
+                                card.innerHTML = `<div class="card">
+                                <img src="${imageSrc}" class="card-img-top" alt="${owner}'s profile picture or custom image">
+                                <div class="card-body">
+                                    <h5 class="card-title">${repoData.name}</h5>
+                                    <p class="card-text">${repoData.description || "No description available"}</p>
+                                    <p class="card-text"><small class="text-muted">By ${repoData.owner.login}</small></p>
+                                    <a href="${repoUrl}" target="_blank" class="btn btn-primary">View Repository</a>
+                                    </div>
+                                    </div>
+                                    `;
+                                document.getElementById("cs315-platformer-github").appendChild(card);
+                            } catch (error) {
+                                console.error("Error fetching repository details:", error);
+                            }
+                        }
+
+                        // Fetch details for each repository in the list
+                        schoolRepos.forEach(fetchRepoDetails);
+                    </script>
+
+                    <p>This game was made completely in GDScript, with free assets found on itch.io. Links to the assets
+                        can be found in the README of the git repository.</p>
+
+                    <img src="assets/img/game_design_imgs/platformer/platformer pic1.png"
+                        style="max-width: 100%; height: auto;"></img>
+                    <br>
+                    <p>For this project, I used Godot's tileset/tilemap objects which made handling tile collisions and
+                        world building much easier</p>
+
+                    <img src="assets/img/game_design_imgs/platformer/platformer pic2.png"
+                        style="max-width: 100%; height: auto;"></img>
+                    <br>
+                    <p>I also used AnimationTree nodes for all player/enemy animations to ensure smooth transitions
+                        between animations.</p>
+                    <br>
+                    <p>Specifics in this project can be depicted by looking through the Github repository!</p>
+
                 </div>
 
                 <script>
