@@ -52,118 +52,101 @@
         <section class="resume-section" id="animation" style="display: block;">
             <div class="resume-section-content">
                 <h2 class="mb-5">Animation</h2>
-
-                <h4 style="color: crimson; font-size: 14px">Videos might take a while to load due to budget file
-                    hosting!
-                    Consider downloading them or waiting to play them.</h4>
-
                 <br>
 
-                <div class="videoPlaylistContainer">
-
-                    <div class="gallery-front-video">
-                        <div class="gallery-video">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213513&authkey=!AD8Sn2co7P5xBCY"
-                                controls></video>
-                            <h3 class="video-gallery-title"><em>Spider-Man: No Way Home - </em>end scene in Lego</h3>
-                            <p class="video-gallery-description" style="display: flex">This was made and rendered in
-                                Blender. Rendered in low sample size. I might come back to this finish it in the future
-                            </p>
-                        </div>
+                <div class="video-gallery-container">
+                    <div class="main-video-section">
+                        <iframe class="main-video" src="" frameborder="0" allowfullscreen></iframe>
+                        <h3 class="video-title"></h3>
+                        <p class="video-description"></p>
                     </div>
-                    <div class="video-gallery-list">
-
-                        <div class="playlist-vid active">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213513&authkey=!AD8Sn2co7P5xBCY"></video>
-                            <h3 class="video-gallery-title"><em>Spider-Man: No Way Home - </em>end scene in Lego</h3>
-                            <p class="video-gallery-description" style="display: none">This was made and rendered in
-                                Blender. Rendered in low sample size. I might come back to this finish it in the future
-                            </p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video src="assets/img/Greenfield_Evan_room_ani.mp4"></video>
-                            <h3 class="video-gallery-title">Simple room scene</h3>
-                            <p class="video-gallery-description" style="display: none">All modeling/texturing was done
-                                in
-                                Maya. Rendered using Pixar's RenderMan. This was for a project in my ART210 Intro to 3D
-                                Animation class.</p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213514&authkey=!ADOf-leFrZVtfZU"></video>
-                            <h3 class="video-gallery-title">Horror Game Cutscene</h3>
-                            <p class="video-gallery-description" style="display: none">This is a cutscene I made for a
-                                game
-                                my friend was making. Made using Blender.</p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213511&authkey=!AIdvrxUSgTI1t-I"></video>
-                            <h3 class="video-gallery-title">Little Robot Plays Piano</h3>
-                            <p class="video-gallery-description" style="display: none">This was my first attempt at
-                                manually
-                                animating a character in Blender. I hope to release some of my more recent work soon.
-                            </p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video src="assets/img/Greenfield_Evan_car_commercial.mp4"></video>
-                            <h3 class="video-gallery-title">Fake Car Commercial</h3>
-                            <p class="video-gallery-description" style="display: none">This is a car commercial I made
-                                for
-                                my Intro to Animation class. Since I had already done most of what we were learning in
-                                the
-                                course, I decided to add some "comedic elements" to it. This was rendered only in 540p
-                                using
-                                Maya's Arnold.</p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video src="assets/img/Greenfield_Evan_walk_anim.mp4"></video>
-                            <h3 class="video-gallery-title">Walk Cycle</h3>
-                            <p class="video-gallery-description" style="display: none">This is a simple walk cycle I
-                                made in
-                                Maya for my Intro to Animation course (playblasted).</p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213515&authkey=!ADhrL-HN7B6h8OU"></video>
-                            <h3 class="video-gallery-title">Lego Snow Simulation</h3>
-                            <p class="video-gallery-description" style="display: none">This is a scene in a Lego
-                                re-creation
-                                I am making where I was testing snow physics with Legos.</p>
-                        </div>
-                        <div class="playlist-vid">
-                            <video
-                                src="https://onedrive.live.com/download?resid=1E0D8364906B257%213512&authkey=!AKM2sr6joWUTupo"></video>
-                            <h3 class="video-gallery-title">Lego Water Simulation</h3>
-                            <p class="video-gallery-description" style="display: none">This is a Lego water simulation I
-                                made in Blender.</p>
-                        </div>
-                    </div>
+                    <div class="playlist-section"></div>
                 </div>
 
                 <script>
-                    let listVideo = document.querySelectorAll('.video-gallery-list .playlist-vid');
-                    let mainVideo = document.querySelector('.gallery-front-video video');
-                    let title = document.querySelector('.gallery-front-video .video-gallery-title');
-                    let description = document.querySelector('.gallery-front-video .video-gallery-description');
+                    // Array of YouTube videos with URLs, titles, and descriptions
+                    const videos = [
+                        {
+                            url: "https://youtube.com/embed/jqAKp7kmdFo",
+                            title: "Spider-Man: No Way Home - End Scene in Lego",
+                            description: "This was made and rendered in Blender. Rendered in low sample size. I might come back to this finish it in the future."
+                        },
+                        {
+                            url: "https://www.youtube.com/embed/wmvUnb1WCVM",
+                            title: "Simple Room Scene",
+                            description: "All modeling/texturing was done in Maya. Rendered using Pixar's RenderMan. This was for a project in my ART210 Intro to 3D Animation class."
+                        },
+                        {
+                            url: "https://www.youtube.com/embed/toHSncohSqM",
+                            title: "Horror Game Cutscene",
+                            description: "This is a cutscene I made for a game my friend was making. Made using Blender."
+                        },
+                        {
+                            url: "https://youtube.com/embed/_gI5GSFWn_E",
+                            title: "Robot Plays Piano",
+                            description: "This was my first attempt at manually animating a character in Blender."
+                        },
+                        {
+                            url: "https://youtube.com/embed/WdUUxxVPRXo",
+                            title: "Fake Car Commercial",
+                            description: "This is a car commercial I made for my Intro to Animation class. Since I had already done most of what we were learning in the course, I decided to add some \"comedic elements\" to it. This was rendered only in 540p using Maya's Arnold."
+                        },
+                        {
+                            url: "https://youtube.com/embed/YXxTuQQiBQQ",
+                            title: "Walk Cycle",
+                            description: "This is a simple walk cycle I made in Maya for my Intro to Animation course (playblasted)."
+                        },
+                        {
+                            url: "https://youtube.com/embed/hl-Lh2GLWcI",
+                            title: "Lego Snow Simulation",
+                            description: "This is a scene in a Lego re-creation I am making where I was testing snow physics with Legos."
+                        },
+                        {
+                            url: "https://youtube.com/embed/UZVsIrzkNyQ",
+                            title: "Lego Snow Simulation",
+                            description: "This is a scene in a Lego re-creation I am making where I was testing snow physics with Legos."
+                        },
+                    ];
 
-                    listVideo.forEach(video => {
-                        video.onclick = () => {
-                            listVideo.forEach(vid => vid.classList.remove('active'));
-                            video.classList.add('active');
-                            if (video.classList.contains('active')) {
-                                let src = video.children[0].getAttribute('src');
-                                mainVideo.src = src;
-                                let text = video.children[1].innerHTML;
-                                title.innerHTML = text;
-                                let desc = video.children[2].innerHTML;
-                                description.innerHTML = desc;
-                            }
-                        };
+                    const mainVideo = document.querySelector('.main-video');
+                    const mainTitle = document.querySelector('.video-title');
+                    const mainDescription = document.querySelector('.video-description');
+                    const playlistSection = document.querySelector('.playlist-section');
+
+                    function loadVideo(video, index) {
+                        mainVideo.src = video.url + "?rel=0&modestbranding=1"
+                        mainTitle.textContent = video.title;
+                        mainDescription.textContent = video.description;
+                        document.querySelectorAll('.playlist-video').forEach((vid, idx) => {
+                            vid.classList.toggle('active', idx === index);
+                        });
+                    }
+
+                    videos.forEach((video, index) => {
+                        const videoElement = document.createElement('div');
+                        videoElement.classList.add('playlist-video');
+                        if (index === 0) videoElement.classList.add('active');
+
+                        const thumbnail = document.createElement('img');
+                        const videoId = video.url.split('/embed/')[1];
+                        thumbnail.src = `https://img.youtube.com/vi/${videoId}/0.jpg`; // YouTube Thumbnail URL
+                        thumbnail.alt = video.title;
+                        thumbnail.classList.add('playlist-thumbnail');
+
+                        const title = document.createElement('span');
+                        title.textContent = video.title;
+                        title.classList.add('playlist-title');
+
+                        videoElement.appendChild(thumbnail);
+                        videoElement.appendChild(title);
+                        playlistSection.appendChild(videoElement);
+
+                        videoElement.addEventListener('click', () => loadVideo(video, index));
                     });
+
+                    loadVideo(videos[0], 0);
                 </script>
+
 
             </div>
         </section>
